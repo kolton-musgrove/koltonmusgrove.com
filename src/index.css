@@ -1,68 +1,74 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  --color-cadet-gray-100: #1b2028;
+  --color-cadet-gray-200: #353f50;
+  --color-cadet-gray-300: #505f77;
+  --color-cadet-gray-400: #6c7f9d;
+  --color-cadet-gray-500: #94a2b8;
+  --color-cadet-gray-600: #a9b4c6;
+  --color-cadet-gray-700: #bfc7d4;
+  --color-cadet-gray-800: #d4dae2;
+  --color-cadet-gray-900: #eaecf1;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-alice-blue-100: #202c3d;
+  --color-alice-blue-200: #3f597b;
+  --color-alice-blue-300: #6686b0;
+  --color-alice-blue-400: #a3b7d0;
+  --color-alice-blue-500: #e2e8f0;
+  --color-alice-blue-600: #e7ecf3;
+  --color-alice-blue-700: #edf1f6;
+  --color-alice-blue-800: #f3f5f9;
+  --color-alice-blue-900: #f9fafc;
+
+  --color-turquoise-100: #0c2f2a;
+  --color-turquoise-200: #185e54;
+  --color-turquoise-300: #248d7d;
+  --color-turquoise-400: #31bca7;
+  --color-turquoise-500: #55d3c1;
+  --color-turquoise-600: #77dccd;
+  --color-turquoise-700: #99e5d9;
+  --color-turquoise-800: #bbede6;
+  --color-turquoise-900: #ddf6f2;
+
+  --color-oxford-blue-100: #030508;
+  --color-oxford-blue-200: #060910;
+  --color-oxford-blue-300: #090e19;
+  --color-oxford-blue-400: #0c1221;
+  --color-oxford-blue-500: #0f172a;
+  --color-oxford-blue-600: #273c6c;
+  --color-oxford-blue-700: #3f60af;
+  --color-oxford-blue-800: #7a93cf;
+  --color-oxford-blue-900: #bcc9e7;
+
+  --color-lavender-web-100: #162542;
+  --color-lavender-web-200: #2c4984;
+  --color-lavender-web-300: #466fc1;
+  --color-lavender-web-400: #88a2d7;
+  --color-lavender-web-500: #c9d5ed;
+  --color-lavender-web-600: #d4def1;
+  --color-lavender-web-700: #dfe6f4;
+  --color-lavender-web-800: #eaeef8;
+  --color-lavender-web-900: #f4f7fb;
+
+  --color-gunmetal-100: #04080b;
+  --color-gunmetal-200: #081116;
+  --color-gunmetal-300: #0c1922;
+  --color-gunmetal-400: #10212d;
+  --color-gunmetal-500: #152b3a;
+  --color-gunmetal-600: #2b5978;
+  --color-gunmetal-700: #4289b8;
+  --color-gunmetal-800: #80b0d1;
+  --color-gunmetal-900: #bfd8e8;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+h1,
+h2,
+h3,
+nav a {
+  font-family: "Source Sans 3", sans-serif;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  font-family: "Lora", serif;
 }

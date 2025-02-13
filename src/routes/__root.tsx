@@ -5,10 +5,22 @@ function NavItem({ to, text }: { to: string; text: string }) {
   return (
     <Link
       to={to}
-      className="hover:text-alice-blue-500 active:text-alice-blue-500 group flex w-fit flex-row items-center hover:font-bold active:font-bold"
+      className="hover:text-alice-blue-500 center group flex w-fit flex-row items-center text-sm font-medium"
+      activeProps={{
+        className:
+          "text-alice-blue-500 items center group flex w-fit flex-row text-sm font-bold",
+      }}
     >
-      <hr className="group-hover:border-alice-blue-500 mr-2 w-12 transition-all group-hover:w-16 group-active:w-16" />
-      {text}
+      {({ isActive }) => {
+        const styling = `group-hover:border-alice-blue-500 mr-4 w-12 transition-all group-hover:w-16${isActive ? "border-alice-blue-500 w-16" : ""}`;
+
+        return (
+          <>
+            <hr className={styling} />
+            {text}
+          </>
+        );
+      }}
     </Link>
   );
 }
@@ -30,10 +42,12 @@ export const Route = createRootRoute({
         </div>
 
         <nav className="text-cadet-gray-500 flex flex-col gap-2 p-2 font-light">
-          <NavItem to="/" text="Home" />
-          <NavItem to="/about" text="About" />
-          <NavItem to="/blog" text="Blog" />
+          <NavItem to="/" text="HOME" />
+          <NavItem to="/about" text="ABOUT" />
+          <NavItem to="/blog" text="BLOG" />
         </nav>
+
+        <footer className="flex flex-row gap-2 self-end p-2"></footer>
       </section>
 
       <hr />

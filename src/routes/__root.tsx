@@ -4,6 +4,7 @@ import { CursorGradient } from "../components/CursorGradient";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
+import { Analytics } from "@vercel/analytics/react";
 
 const DynamicTanStackRouterDevtools =
   process.env.NODE_ENV === "production"
@@ -67,6 +68,8 @@ export const Route = createRootRoute({
           <DynamicTanStackRouterDevtools />
         </Suspense>
       </div>
+
+      <Analytics />
     </>
   ),
 });

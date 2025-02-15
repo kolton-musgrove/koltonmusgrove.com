@@ -1,17 +1,18 @@
+import React, { Suspense } from "react";
 import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import { CursorGradient } from "../components/CursorGradient";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 
-const DynamicTanStackRouterDevtools = () => {
-  if (import.meta.env.MODE === "development") {
-    return <TanStackRouterDevtools />;
-  }
-
-  return null;
-};
+const DynamicTanStackRouterDevtools =
+  process.env.NODE_ENV === "production"
+    ? () => null
+    : React.lazy(() =>
+        import("@tanstack/router-devtools").then((module) => ({
+          default: module.TanStackRouterDevtools,
+        })),
+      );
 
 export const Route = createRootRoute({
   beforeLoad: () => {
@@ -20,20 +21,22 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <CursorGradient />
-      <div className="h-lvh bg-background text-text flex w-full flex-row">
-        <section className="h-7/8 ml-10 flex w-1/2 flex-col pl-48 pt-32">
-          <div className="mb-10 flex w-2/3 flex-col">
-            <h1 className="text-text-light mb-2 text-5xl font-bold">
+      <div className="bg-background text-text-dark lg:h-lvh flex h-max w-full flex-col p-5 lg:flex-row">
+        <section className="lg:h-7/8 flex flex-col lg:ml-10 lg:w-1/2 lg:pl-48 lg:pt-32">
+          <div className="mb-8 mt-2 flex flex-col lg:mb-10 lg:w-2/3">
+            <h1 className="text-text-light mb-2 text-3xl font-bold lg:text-5xl">
               Kolton Musgrove
             </h1>
-            <h3 className="mb-5 text-2xl">Software Engineer</h3>
-            <h4 className="text-md text-text-dark w-3/4 font-light">
+            <h3 className="text-text mb-5 text-xl lg:text-2xl">
+              Software Engineer
+            </h3>
+            <h4 className="text-md text-text-dark font-light lg:w-3/4">
               I have a passion for building complex systems, solving challening
               problems, and meeting users' needs.
             </h4>
           </div>
 
-          <nav className="text-text-dark flex flex-col gap-2 p-2 font-light">
+          <nav className="text-text-dark hidden flex-col gap-2 p-2 font-light lg:flex">
             <NavItem to="/" text="HOME" />
             <NavItem to="/about" text="ABOUT" />
             <NavItem to="/blog" text="BLOG" />
@@ -58,11 +61,11 @@ export const Route = createRootRoute({
           </footer>
         </section>
 
-        <hr />
-
         <Outlet />
 
-        <DynamicTanStackRouterDevtools />
+        <Suspense>
+          <DynamicTanStackRouterDevtools />
+        </Suspense>
       </div>
     </>
   ),

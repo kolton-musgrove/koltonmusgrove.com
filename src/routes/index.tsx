@@ -6,34 +6,41 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="text-cadet-gray-500 mr-48 mt-32 flex w-1/2 flex-col">
+    <div className="mr-48 mt-24 flex w-full flex-col lg:mt-32 lg:w-1/2">
+      <h3 className="text-text-light mb-6 font-bold">ABOUT</h3>
       <div className="flex flex-col gap-2">
         <p>
           I'm a devloper passionate about building complex, useful, and robust
-          system. I’m a developer passionate about crafting accessible,
-          pixel-perfect user interfaces that blend thoughtful design with robust
-          engineering. My favorite work lies at the intersection of design and
-          development, creating experiences that not only look great but are
-          meticulously built for performance and usability.
+          system. The most meaningful work I do lies at the intersection of
+          usability, performance, and complexity. I love to build things that
+          are both beautiful and functional, and I'm always looking for new
+          challenges to tackle.
         </p>
         <p>
-          Currently, I'm a Senior Front-End Engineer at Klaviyo, specializing in
-          accessibility. I contribute to the creation and maintenance of UI
-          components that power Klaviyo’s frontend, ensuring our platform meets
-          web accessibility standards and best practices to deliver an inclusive
-          user experience.
+          Currently, I'm a software engineer at
+          <span className="text-text-light"> Red Rover</span>, where I tackle
+          complex problems and build solutions that help our customers succeed.
+          My role focuses on aiding our customer support team tackle technical
+          issues, developing internal tools, and improving our platform's user
+          experience, relaibility, and performance.
         </p>
         <p>
-          In the past, I've had the opportunity to develop software across a
-          variety of settings — from advertising agencies and large corporations
-          to start-ups and small digital product studios. Additionally, I also
-          released a comprehensive video course a few years ago, guiding
-          learners through building a web app with the Spotify API.
+          In the past, I've had the opportunity to work with several small
+          startup companies in the
+          <span className="text-text-light"> healthcare</span> and
+          <span className="text-text-light">
+            &nbsp;outdoor recreation industries.&nbsp;
+          </span>
+          This work has ranged from front-end development to full-stack
+          development, and has included building web applications, APIs, and
+          internal tools. Some of the projects I'm most proud of include
+          improving the observability of users errors at Polaris Adventures and
+          using machine learning to predict energy consumption patterns at at a
+          major university.
         </p>
         <p>
-          In my spare time, I’m usually climbing, reading, hanging out with my
-          wife and two cats, or running around Hyrule searching for Korok seeds
-          K o r o k s e e d s .
+          In my free tim, I enjoy reading non-fiction, taking my dog Duke for
+          long walks, cooking with my girlfriend, and playing card games.
         </p>
       </div>
 

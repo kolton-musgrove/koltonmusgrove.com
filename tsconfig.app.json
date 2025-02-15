@@ -14,7 +14,6 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["@react-three/fiber", "three", "react", "react-dom"],
 
     /* Linting */
     "strict": true,

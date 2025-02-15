@@ -1,20 +1,33 @@
 import { useState, useEffect } from "react";
 
 export function CursorGradient() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState<null | { x: number; y: number }>(
+    null,
+  );
+
+  type gradientOption = { name: string; colors: string[] };
+
+  const oceanDepths: gradientOption = {
+    name: "Ocean Depths",
+    colors: [
+      "rgba(0, 120, 212, 0.15)",
+      "rgba(64, 224, 208, 0.15)",
+      "rgba(0, 206, 209, 0.15)",
+      "rgba(31, 31, 31, 0.8)", // Near-background
+      "rgba(31, 31, 31, 1)", // Background color
+    ],
+  };
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      requestAnimationFrame(() => {
-        setPosition({ x: e.clientX, y: e.clientY });
-      });
+      setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    document.addEventListener("mousemove", handleMouseMove);
-    return () => document.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+    window.addEventListener("mousemove", handleMouseMove, { once: true });
 
-  return (
+    return () => document.removeEventListener("mousemove", handleMouseMove);
+  }, [position]);
+  return position ? (
     <div
       style={{
         position: "fixed",
@@ -27,17 +40,17 @@ export function CursorGradient() {
       <div
         style={{
           position: "absolute",
-          left: `${position.x - 125}px`,
-          top: `${position.y - 125}px`,
-          width: "250px",
-          height: "250px",
-          background:
-            "radial-gradient(circle at center, rgba(147, 51, 234, 0.3) 0%, rgba(236, 72, 153, 0.3) 35%, rgba(239, 68, 68, 0) 70%)",
+          left: `${position.x - 250}px`,
+          top: `${position.y - 250}px`,
+          width: "500px",
+          height: "500px",
+          opacity: 0.15,
+          background: `radial-gradient(circle,${oceanDepths.colors.join()}`,
           borderRadius: "50%",
           willChange: "transform",
-          filter: "blur(10px)",
+          filter: "blur(25px)",
         }}
       />
     </div>
-  );
+  ) : null;
 }

@@ -40,10 +40,10 @@ export function CursorGradient() {
       <div
         style={{
           position: "absolute",
-          left: `${position.x - 250}px`,
-          top: `${position.y - 250}px`,
-          width: "500px",
-          height: "500px",
+          left: `${position.x - 375}px`,
+          top: `${position.y - 375}px`,
+          width: "750px",
+          height: "750px",
           opacity: 0.15,
           background: `radial-gradient(circle,${oceanDepths.colors.join()}`,
           borderRadius: "50%",

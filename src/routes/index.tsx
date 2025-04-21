@@ -10,37 +10,72 @@ function Index() {
       <h3 className="text-text-light mb-6 font-bold">ABOUT</h3>
       <div className="flex flex-col gap-2">
         <p>
-          I'm a devloper passionate about building complex, useful, and robust
-          system. The most meaningful work I do lies at the intersection of
+          I'm a developer passionate about building complex, useful, and robust
+          systems. The most meaningful work I do lies at the intersection of
           usability, performance, and complexity. I love to build things that
           are both beautiful and functional, and I'm always looking for new
           challenges to tackle.
         </p>
         <p>
           Currently, I'm a software engineer at
-          <span className="text-text-light"> Red Rover</span>, where I tackle
-          complex problems and build solutions that help our customers succeed.
-          My role focuses on aiding our customer support team tackle technical
-          issues, developing internal tools, and improving our platform's user
-          experience, relaibility, and performance.
+          <a
+            href="https://www.redroverk12.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-light"
+          >
+            {" Red Rover"}
+          </a>
+          , where I help resolve real-time technical issues for clients. So far
+          in my role I've worked with several teams to improve our triage
+          process, reduce spend on third-party tools, and improve our developer
+          experience.
         </p>
         <p>
-          In the past, I've had the opportunity to work with several small
-          startup companies in the
-          <span className="text-text-light"> healthcare</span> and
-          <span className="text-text-light">
-            &nbsp;outdoor recreation industries.&nbsp;
-          </span>
-          This work has ranged from front-end development to full-stack
-          development, and has included building web applications, APIs, and
-          internal tools. Some of the projects I'm most proud of include
-          improving the observability of users errors at Polaris Adventures and
-          using machine learning to predict energy consumption patterns at at a
-          major university.
+          In the past, I've had the privilege to work with a small team of
+          developers on a project in the
+          <a
+            href="https://adventures.polaris.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-light"
+          >
+            {" outdoor recreation "}
+          </a>
+          industry. This project involved building a web application that allows
+          users to book outdoor adventures, manage their reservations, and
+          communicate with our team. I was responsible for improving the testing
+          suite of the application, managing several significant refactors, and
+          increasing observability of the system. I significantly improved our
+          ability to surface and resolve issues in production, and I was able to
+          reduce the number of issues in our backlog by more than 80% over the
+          course of a few months.
         </p>
         <p>
-          In my free tim, I enjoy reading non-fiction, taking my dog Duke for
-          long walks, cooking with my girlfriend, and playing card games.
+          In college, I was able to work on several research projects including
+          using machine learning to predict the energy consumption of university
+          campuses and
+          <a
+            href="https://github.com/kolton-musgrove/honors-thesis"
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-light"
+          >
+            {" my honors thesis "}
+          </a>
+          which involved multiple machine learning models in conjunction with
+          each other to improve the efficiency of their predictions.
+        </p>
+        <p>
+          I have experience with a variety of technologies, including React,
+          Remix, Node.js, Python, Go, and Rust. I'm always looking to learn new
+          things and improve my skills. I enjoy working with teams to solve
+          complex problems and build great products.
+        </p>
+        <p>
+          In my free time, I enjoy spending time with my girlfriend, reading
+          non-fiction, taking my dog Duke for long walks, and playing card
+          games.
         </p>
       </div>
 

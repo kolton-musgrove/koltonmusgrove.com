@@ -12,7 +12,7 @@ const DynamicTanStackRouterDevtools =
     : React.lazy(() =>
         import("@tanstack/router-devtools").then((module) => ({
           default: module.TanStackRouterDevtools,
-        })),
+        }))
       );
 
 export const Route = createRootRoute({
@@ -32,16 +32,15 @@ export const Route = createRootRoute({
               Software Engineer
             </h3>
             <h4 className="text-md text-text-dark font-light lg:w-3/4">
-              I have a passion for building complex systems, solving challening
+              I have a passion for building complex systems, solving challenging
               problems, and meeting users' needs.
             </h4>
           </div>
 
-          <nav className="text-text-dark hidden flex-col gap-2 p-2 font-light lg:flex">
+          {/* <nav className="text-text-dark hidden flex-col gap-2 p-2 font-light lg:flex">
             <NavItem to="/" text="HOME" />
-            <NavItem to="/about" text="ABOUT" />
             <NavItem to="/blog" text="BLOG" />
-          </nav>
+          </nav> */}
 
           <footer className="mt-auto flex flex-row gap-4 self-start p-2">
             <SocialLink to="https://github.com/kolton-musgrove">

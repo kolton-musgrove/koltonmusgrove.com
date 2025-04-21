@@ -5,7 +5,6 @@ import { SiLeetcode } from "react-icons/si";
 import { Analytics } from "@vercel/analytics/react";
 import ReactDom from "react-dom/client";
 import { CursorGradient } from "./components/CursorGradient.tsx";
-import { AboutSection } from "./about.tsx";
 import "./index.css";
 
 const rootElement = document.getElementById("root")!;
@@ -18,13 +17,9 @@ if (!rootElement.innerHTML) {
       <main>
         <CursorGradient />
         <Sidebar />
-
-        <section>
-          <AboutSection />
-        </section>
       </main>
       <Analytics />
-    </StrictMode>,
+    </StrictMode>
   );
 }
 
@@ -45,11 +40,6 @@ function Sidebar() {
           </h4>
         </div>
 
-        <nav className="text-text-dark hidden flex-col gap-2 p-2 font-light lg:flex">
-          /* <NavItem to="/about" text="ABOUT" /> */ /*{""}
-          <NavItem to="/blog" text="BLOG" /> */
-        </nav>
-
         <footer className="mt-auto flex flex-row gap-4 self-start p-2">
           <SocialLink to="https://github.com/kolton-musgrove">
             <FaGithub className="h-full w-full" />
@@ -69,22 +59,6 @@ function Sidebar() {
         </footer>
       </section>
     </div>
-  );
-}
-
-function NavItem({ to, text }: { to: string; text: string }) {
-  // const styling = `group-hover:boarder-text-light mr-4 w-12 transition-all group-hover:w-16${isActive ? "border-text-light w-16" : ""}`;
-
-  return (
-    <a
-      href={to}
-      className="hover:text-text-light center group flex w-fit flex-row items-center text-sm font-medium"
-    >
-      <>
-        <hr className={styling} />
-        {text}
-      </>
-    </a>
   );
 }
 

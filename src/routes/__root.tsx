@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
+import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { CursorGradient } from "../components/CursorGradient";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -73,29 +73,29 @@ export const Route = createRootRoute({
   ),
 });
 
-function NavItem({ to, text }: { to: string; text: string }) {
-  return (
-    <Link
-      to={to}
-      className="hover:text-text-light center group flex w-fit flex-row items-center text-sm font-medium"
-      activeProps={{
-        className:
-          "text-text-light items center group flex w-fit flex-row text-sm font-bold",
-      }}
-    >
-      {({ isActive }) => {
-        const styling = `group-hover:boarder-text-light mr-4 w-12 transition-all group-hover:w-16${isActive ? "border-text-light w-16" : ""}`;
+// function NavItem({ to, text }: { to: string; text: string }) {
+//   return (
+//     <Link
+//       to={to}
+//       className="hover:text-text-light center group flex w-fit flex-row items-center text-sm font-medium"
+//       activeProps={{
+//         className:
+//           "text-text-light items center group flex w-fit flex-row text-sm font-bold",
+//       }}
+//     >
+//       {({ isActive }) => {
+//         const styling = `group-hover:boarder-text-light mr-4 w-12 transition-all group-hover:w-16${isActive ? "border-text-light w-16" : ""}`;
 
-        return (
-          <>
-            <hr className={styling} />
-            {text}
-          </>
-        );
-      }}
-    </Link>
-  );
-}
+//         return (
+//           <>
+//             <hr className={styling} />
+//             {text}
+//           </>
+//         );
+//       }}
+//     </Link>
+//   );
+// }
 
 function SocialLink({
   to,

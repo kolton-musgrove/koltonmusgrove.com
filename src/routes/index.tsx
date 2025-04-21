@@ -53,8 +53,16 @@ function Index() {
         </p>
         <p>
           In college, I was able to work on several research projects including
-          using machine learning to predict the energy consumption of university
-          campuses and
+          using machine learning to
+          <a
+            href="https://digitalcommons.liberty.edu/research_symp/2021/posters/63/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-text-light"
+          >
+            {" predict the energy consumption "}
+          </a>
+          of university campuses and
           <a
             href="https://github.com/kolton-musgrove/honors-thesis"
             target="_blank"

@@ -35,7 +35,7 @@ function Sidebar() {
             Software Engineer
           </h3>
           <h4 className="text-md text-text-dark font-light lg:w-3/4">
-            I have a passion for building complex systems, solving challening
+            I have a passion for building complex systems, solving challenging
             problems, and meeting users' needs.
           </h4>
         </div>

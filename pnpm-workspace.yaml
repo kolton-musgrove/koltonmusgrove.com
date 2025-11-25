@@ -1,4 +1,6 @@
 onlyBuiltDependencies:
-  - '@swc/core'
-  - '@tailwindcss/oxide'
-  - esbuild
+    - '@swc/core'
+    - '@tailwindcss/oxide'
+    - esbuild
+packages:
+    - './*'

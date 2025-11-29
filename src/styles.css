@@ -1,37 +1,37 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  /* Background colors */
-  --color-background-dark: #181818;
-  --color-background: #1f1f1f;
-  --color-background-darker: #202020;
-  --color-border: #2b2b2b;
-  --color-dropdown: #313131;
+    /* Background colors */
+    --color-background-dark: #181818;
+    --color-background: #1f1f1f;
+    --color-background-darker: #202020;
+    --color-border: #2b2b2b;
+    --color-dropdown: #313131;
 
-  /* Text colors */
-  --color-text-dark: #9d9d9d;
-  --color-text: #cccccc;
-  --color-text-light: #ffffff;
+    /* Text colors */
+    --color-text-dark: #9d9d9d;
+    --color-text: #cccccc;
+    --color-text-light: #ffffff;
 
-  /* Brand/accent colors */
-  --color-accent: #0078d4;
-  --color-selection: #1555c2;
+    /* Brand/accent colors */
+    --color-accent: #0078d4;
+    --color-selection: #1555c2;
 
-  /* Status colors */
-  --color-error: #f85149;
-  --color-success: #2ea043;
+    /* Status colors */
+    --color-error: #f85149;
+    --color-success: #2ea043;
 
-  /* UI elements */
-  --color-line-number: #6e7681;
+    /* UI elements */
+    --color-line-number: #6e7681;
 }
 
 h1,
 h2,
 h3,
 nav a {
-  font-family: "Source Sans 3", sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
 }
 
 body {
-  font-family: "Lora", serif;
+    font-family: 'Lora', serif;
 }

@@ -1,12 +1,12 @@
 interface BlogPost {
-    title: string
-    date: string
-    slug: string
-    tags: string[]
-    excerpt: string
-    draft: boolean
-    content: string
-    filename: string
+  title: string;
+  date: string;
+  slug: string;
+  tags: string[];
+  excerpt: string;
+  draft: boolean;
+  content: string;
+  filename: string;
 }
 
 function getAllPosts(): BlogPost[] {}

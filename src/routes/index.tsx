@@ -4,98 +4,69 @@ export const Route = createFileRoute("/")({
   component: Landing,
 });
 
+function LightLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <a href={href} target="_blank" rel="noreferrer" className="text-text-light">
+      {children}
+    </a>
+  );
+}
+
 function Landing() {
   return (
-    <div className="flex w-full flex-col md:w-4/5 lg:mx-auto lg:mt-32 lg:w-2/3 lg:max-w-4xl">
-      <div className="flex flex-col gap-2">
-        <p>
-          I'm a developer passionate about building complex, useful, and robust
-          systems. The most meaningful work I do lies at the intersection of
-          usability, performance, and complexity. I love to build things that
-          are both beautiful and functional, and I'm always looking for new
-          challenges to tackle.
-        </p>
-        <p>
-          Currently, I'm a software engineer at
-          <a
-            href="https://www.redroverk12.com"
-            target="_blank"
-            rel="noreferrer"
-            className="text-text-light"
-          >
-            {" Red Rover"}
-          </a>
-          , where I help resolve real-time technical issues for clients. So far
-          in my role I've worked with several teams to improve our triage
-          process, reduce spend on third-party tools, and improve our developer
-          experience.
-        </p>
-        <p>
-          In the past, I've had the privilege to work with a small team of
-          developers on a project in the
-          <a
-            href="https://adventures.polaris.com"
-            target="_blank"
-            rel="noreferrer"
-            className="text-text-light"
-          >
-            {" outdoor recreation "}
-          </a>
-          industry. This project involved building a web application that allows
-          users to book outdoor adventures, manage their reservations, and
-          communicate with our team. I was responsible for improving the testing
-          suite of the application, managing several significant refactors, and
-          increasing observability of the system. I significantly improved our
-          ability to surface and resolve issues in production, and I was able to
-          reduce the number of issues in our backlog by more than 80% over the
-          course of a few months.
-        </p>
-        <p>
-          In college, I was able to work on several research projects including
-          using machine learning to
-          <a
-            href="https://digitalcommons.liberty.edu/research_symp/2021/posters/63/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-text-light"
-          >
-            {" predict the energy consumption "}
-          </a>
-          of university campuses and
-          <a
-            href="https://github.com/kolton-musgrove/honors-thesis"
-            target="_blank"
-            rel="noreferrer"
-            className="text-text-light"
-          >
-            {" my honors thesis "}
-          </a>
-          which involved multiple machine learning models in conjunction with
-          each other to improve the efficiency of their predictions.
-        </p>
-        <p>
-          I have experience with a variety of technologies, including React,
-          Remix, Node.js, Python, Go, and Rust. I'm always looking to learn new
-          things and improve my skills. I enjoy working with teams to solve
-          complex problems and build great products.
-        </p>
-        <p>
-          In my free time, I enjoy spending time with my wife, reading
-          non-fiction, spending time outdoors, and playing card games.
-        </p>
-      </div>
-
-      {/* TODO Experience Section: highlights of work experience, focusing on react and Remix */}
-      <div className="flex gap-2"></div>
-
-      {/* TODO Projects Section: highlights of personal projects, focusing on Python, ML, Go, or Rust */}
-      <div className="flex gap-2"></div>
-
-      {/* TODO Skills Section: highlights of technical skills, focusing on React, Remix, and Node */}
-      <div className="flex gap-2"></div>
-
-      {/* TODO Contact Section: email, phone, and social media links */}
-      <div className="flex gap-2"></div>
+    <div className="flex flex-col gap-2 md:mt-32">
+      <p>
+        I enjoy solving hard problems. In my current role, that looks like
+        features interacting unexpectedly, slow database queries, or long, messy
+        log files. The most satisfying problems I get to work on are ones that
+        are causing users pain or have been annoying my teammates.
+      </p>
+      <p>
+        I'm a software engineer at
+        <LightLink href="https://www.redroverk12.com">
+          {" Red Rover "}
+        </LightLink>
+        , where I help customers when systems don't behave as expected. I handle
+        everything from immediate response, working with team leads to triage
+        issues, and writing/reviewing fixes. Currently, I'm in the process of
+        leading a migration of our FE build system from Webpack to Vite. In my
+        off hours, I'm learning more about caching, CPU architecture, and
+        parallelization.
+      </p>
+      <p>
+        Before this, I worked on a booking platform for
+        <LightLink href="https://adventures.polaris.com">
+          {" outdoor adventures"}
+        </LightLink>
+        , where I helped improve testing, manage refactors, and make the system
+        easier to debug. We cleared more than 80% of our backlog in a few
+        months.
+      </p>
+      <p>
+        In college, I researched machine learning for{" "}
+        <LightLink href="https://digitalcommons.liberty.edu/research_symp/2021/posters/63/">
+          {" energy consumption prediction "}
+        </LightLink>
+        and built
+        <LightLink href="https://github.com/kolton-musgrove/honors-thesis">
+          {" combined ML models "}
+        </LightLink>
+        for my honors thesis.
+      </p>
+      <p>
+        I work mostly with React, C#, .NET, and Node.js, with some Python, Go,
+        and Rust mixed in when I can.
+      </p>
+      <p>
+        I live in North Carolina with my lovely wife. In my free time, I enjoy
+        disc golf, cooking, and reading science fiction.
+      </p>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { SocialLink } from "../components/SocialLink";
 
 export const Footer = () => {
   return (
-    <footer className="mt-5 flex w-full flex-row justify-center gap-4 self-start">
+    <footer className="my-5 flex w-full flex-row justify-center gap-4 self-start">
       <SocialLink to="https://github.com/kolton-musgrove">
         <FaGithub className="h-full w-full" />
       </SocialLink>

@@ -21,10 +21,12 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <CursorGradient />
-      <div className="bg-background text-text-dark flex w-full flex-col p-4">
+      <div className="bg-background text-text-dark flex min-h-svh w-full flex-col p-4">
         <Header />
 
-        <Outlet />
+        <main className="my-auto flex w-full grow flex-col md:mx-auto md:w-4/5 lg:w-2/3 lg:max-w-4xl">
+          <Outlet />
+        </main>
 
         <Footer />
 

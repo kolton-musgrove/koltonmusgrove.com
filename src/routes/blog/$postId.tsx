@@ -3,7 +3,7 @@ import Markdown from "react-markdown";
 
 export const Route = createFileRoute("/blog/$postId")({
   loader: async ({ params }) => {
-    return import(`./${params.postId}.md`);
+    return import(`../posts/${params.postId}.md`);
   },
   component: RenderBlogPost,
 });

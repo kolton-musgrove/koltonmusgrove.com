@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "packageManager": "pnpm@10.23.0",
+  "packageManager": "pnpm@10.26.2",
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --config prettier.config.js --write .",
@@ -13,17 +13,18 @@
   },
   "dependencies": {
     "@tanstack/react-router": "^1.139.3",
-    "@types/node": "^22.19.1",
     "@vercel/analytics": "^1.5.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/router-devtools": "^1.139.3",
     "@tanstack/router-plugin": "^1.139.3",
+    "@types/node": "^22.19.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^3.11.0",

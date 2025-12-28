@@ -1,0 +1,21 @@
+{
+  "name": "vite-plugin-markdown-loader",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Vite plugin to load markdown files with frontmatter support",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {},
+  "keywords": [
+    "vite",
+    "plugin",
+    "vite-plugin",
+    "markdown",
+    "frontmatter"
+  ],
+  "author": "Kolton Musgrove",
+  "license": "ISC",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

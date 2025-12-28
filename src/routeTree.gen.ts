@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as BlogPostIdRouteImport } from './routes/blog/$postId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +23,39 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogPostIdRoute = BlogPostIdRouteImport.update({
+  id: '/blog/$postId',
+  path: '/blog/$postId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog/$postId': typeof BlogPostIdRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog/$postId': typeof BlogPostIdRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog/$postId': typeof BlogPostIdRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/blog'
+  fullPaths: '/' | '/blog/$postId' | '/blog'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/blog'
-  id: '__root__' | '/' | '/blog/'
+  to: '/' | '/blog/$postId' | '/blog'
+  id: '__root__' | '/' | '/blog/$postId' | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogPostIdRoute: typeof BlogPostIdRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
@@ -65,11 +75,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$postId': {
+      id: '/blog/$postId'
+      path: '/blog/$postId'
+      fullPath: '/blog/$postId'
+      preLoaderRoute: typeof BlogPostIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogPostIdRoute: BlogPostIdRoute,
   BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport

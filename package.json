@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --config prettier.config.js --write .",
-    "dev": "vite",
+    "dev": "vite --mode dev",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },

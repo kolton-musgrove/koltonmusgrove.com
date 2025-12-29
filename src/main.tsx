@@ -1,11 +1,7 @@
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import ReactDom from "react-dom/client";
-
-// dynamic generated routeTree
 import { routeTree } from "./routeTree.gen";
-
-// tailwind styles
 import "./styles.css";
 
 const router = createRouter({ routeTree });

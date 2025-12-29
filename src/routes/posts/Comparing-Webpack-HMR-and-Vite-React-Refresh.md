@@ -1,8 +1,9 @@
 ---
 title: "Comparing Webpack HMR and Vite React Refresh"
 date: 2025-12-28
-description: "An in-depth comparison of Webpack's Hot Module Replacement (HMR) and Vite's React Refresh for enhancing the development experience in React applications."
+description: "An in-depth comparison of Webpack's Hot Module Replacement (HMR) and Vite's React Refresh"
 tags: ["Webpack", "Vite", "React", "HMR", "Development Tools"]
+draft: true
 ---
 
 ## Comparing Webpack HMR and Vite React Refresh
